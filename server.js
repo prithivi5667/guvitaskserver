@@ -7,6 +7,7 @@ app.use(express.json())
 require('./db/config')
 const userRouter=require("./routes/Auth")
 app.use('/api',userRouter)
-app.listen(5000,()=>{
+const PORT=5000 ||process.env.PORT
+app.listen(PORT,()=>{
     console.log("server started")
 })
